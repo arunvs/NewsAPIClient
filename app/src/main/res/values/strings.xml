@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NewsAPIClient</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="news_related_image">news image</string>
+    <string name="headline">Headline</string>
+    <string name="description">description</string>
+    <string name="byline">By line</string>
+    <string name="read_more">Read more</string>
+</resources>
