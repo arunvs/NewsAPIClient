@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,18 +13,18 @@
         android:id="@+id/fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="7"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
         app:defaultNavHost="true"
         app:navGraph="@navigation/nav_graph" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnv_news"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@color/search_background"
-        app:itemTextColor="@color/list_text"
-        app:itemIconTint="@color/list_text"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/cardview_light_background"
+        app:itemTextColor="@color/list_text_selector"
+        app:itemIconTint="@color/list_text_selector"
         app:menu="@menu/bottom_menu" />
-</LinearLayout>
+</RelativeLayout>

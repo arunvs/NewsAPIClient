@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/newsFragment"
+        android:state_checked="true"
         android:icon="@drawable/ic_baseline_live_tv_24"
-        android:title="News Headlines" />
+        android:title="@string/news_headlines" />
     <item
         android:id="@+id/savedFragment"
         android:icon="@drawable/ic_baseline_save_24"
-        android:title="Saved News" />
+        android:title="@string/saved_news" />
 </menu>
