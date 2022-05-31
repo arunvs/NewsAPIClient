@@ -50,7 +50,7 @@ class NewsAdapter:RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
            fun bind(article: Asset){
                binding.headline.text = article.headline
                binding.description.text = article.theAbstract
-               binding.byLine.text = article.byLine
+               binding.byLine.text = "~By "+article.byLine
 
                Glide.with(binding.imageview.context).
                load(getSmallestImage(article)).
@@ -66,7 +66,7 @@ class NewsAdapter:RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 
     private fun getSmallestImage(article: Asset): String {
         article.relatedImages.sortedBy { it.width }
-        var images = article.relatedImages.sortedBy { it.width }
+        var images = article.relatedImages.sortedWith(compareBy { it.width*it.height })
         return images[0].url
     }
 

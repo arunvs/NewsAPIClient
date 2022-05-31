@@ -52,8 +52,8 @@ class InfoFragment : Fragment() {
                 }
             }
 
-            val url = article.url.replace("http://","https://")
-            loadUrl(url)
+            //val url = article.url.replace("http://","https://")
+            loadUrl(article.url)
 
         }
 

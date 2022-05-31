@@ -51,12 +51,12 @@ class NewsAPIServiceTest {
     }
 
     @Test
-    fun getTopHeadlines_receivedResponse_correctPageSize(){
+    fun getTopHeadlines_receivedResponse_correctDisplayName(){
       runBlocking {
           enqueueMockResponse("newsresponse.json")
           val responseBody = service.getTopHeadlines().body()
-          val articlesList = responseBody!!.url
-          assertThat(articlesList).isEqualTo("/content/dam/lists/1/3/z/z/q/x/list.html")
+          val articlesList = responseBody!!.displayName
+          assertThat(articlesList).isEqualTo("AFR iPad Editor's Choice")
       }
     }
 
