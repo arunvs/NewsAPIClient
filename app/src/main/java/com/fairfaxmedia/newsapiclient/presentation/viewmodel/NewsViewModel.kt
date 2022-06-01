@@ -82,7 +82,7 @@ class NewsViewModel(
                 val response = getSearchedNewsUseCase.execute(searchQuery)
                 val items = response.data?.assets?.toList()?.filter { it.headline.contains(searchQuery) }
                 if (items != null) {
-                    response.data?.assets = items
+                    response.data.assets = items
                 }
                 searchedNews.postValue(response)
             } else {

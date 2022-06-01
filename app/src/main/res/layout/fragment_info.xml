@@ -16,7 +16,8 @@
         android:src="@drawable/ic_baseline_save_24"
         app:backgroundTint="@color/cardview_light_background"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/save_news" />
 
     <WebView
         android:id="@+id/wv_info"

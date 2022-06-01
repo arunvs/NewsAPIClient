@@ -52,11 +52,11 @@ class InfoFragment : Fragment() {
                 }
             }
 
-            //val url = article.url.replace("http://","https://")
             loadUrl(article.url)
 
         }
 
+        //save news
         fragmentInfoBinding.fabSave.setOnClickListener {
            viewModel.saveArticle(article)
            Snackbar.make(view,"Saved Successfully!",Snackbar.LENGTH_LONG).show()

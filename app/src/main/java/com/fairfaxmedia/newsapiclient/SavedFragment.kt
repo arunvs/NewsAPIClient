@@ -60,6 +60,7 @@ class SavedFragment : Fragment() {
                 return true
             }
 
+            // swipe left to delete saved news
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val position = viewHolder.adapterPosition
                 val article = newsAdapter.differ.currentList[position]

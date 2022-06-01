@@ -27,15 +27,21 @@ class NewsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_news, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        //bind view for data binding
         fragmentNewsBinding = FragmentNewsBinding.bind(view)
+
         viewModel= (activity as MainActivity).viewModel
+
+        //set adapter for list view
         newsAdapter= (activity as MainActivity).newsAdapter
+
+        // lambda click listener as higher order argument to handle item click and navigation to webview
         newsAdapter.setOnItemClickListener {
           val bundle = Bundle().apply {
              putSerializable("selected_article",it)
@@ -50,6 +56,9 @@ class NewsFragment : Fragment() {
         setSearchView()
     }
 
+    /**
+     * observe list data from view model
+     */
     private fun viewNewsList() {
 
         viewModel.getNewsHeadLines()
@@ -111,7 +120,6 @@ class NewsFragment : Fragment() {
                  MainScope().launch {
                      delay(2000)
                      viewModel.searchNews( p0.toString())
-                    // viewSearchedNews()
                  }
                  return false
              }

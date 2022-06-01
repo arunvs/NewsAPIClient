@@ -25,6 +25,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //set navigation component and nav host fragment
+
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.news_nav_fragment) as NavHostFragment
         val navController = navHostFragment.navController
@@ -32,7 +34,8 @@ class MainActivity : AppCompatActivity() {
         binding.bnvNews.setupWithNavController(
            navController
         )
-        viewModel = ViewModelProvider(this,factory)
-            .get(NewsViewModel::class.java)
+
+        // create view model from factory method
+        viewModel = ViewModelProvider(this,factory)[NewsViewModel::class.java]
     }
 }

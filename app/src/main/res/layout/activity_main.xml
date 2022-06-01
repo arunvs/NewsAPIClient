@@ -24,8 +24,8 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/cardview_light_background"
-        app:itemTextColor="@color/list_text_selector"
+        android:background="@color/action_color"
         app:itemIconTint="@color/list_text_selector"
+        app:itemTextColor="@color/list_text_selector"
         app:menu="@menu/bottom_menu" />
 </RelativeLayout>
